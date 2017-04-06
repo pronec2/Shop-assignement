@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Refresh" content="5;url=index.php"
+<meta http-equiv="Refresh" content="5;url=admin.php"
 </head>
 
 <body>

@@ -49,8 +49,8 @@
           <tr>
             <th>ID</th>
             <th>Product</th>
-            <th>Price</th>
             <th>Code</th>
+            <th>Price</th>
               <tr>
                 <?php
                     while($onlineShop2=mysql_fetch_assoc($records))
@@ -60,9 +60,7 @@
                       echo "<td>".$onlineShop2['product']."</td>";
                       echo "<td>".$onlineShop2['code']."</td>";
                       echo "<td>".$onlineShop2['price']."</td>";
-                      echo "<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
-                      echo '<td><a href="edit.php?id=' . $onlineShop2['id']. '"><input type ="Submit" name="Edit" value="Edit"></a></td>';
-                      echo '<td><a href="delete.php?id=' .$onlineShop2['id']. '"><input type ="Submit" name="Delete" value="Delete"></a></td>';
+
 
                       echo "</tr>";
 
@@ -72,7 +70,7 @@
 
                  ?>
 
-        <p><a href="add.php"><input type="submit" name="Insert" value="Insert"></a></p>
+
           <p><a href="logout.php"><input type="submit" name="Insert" value="logout"></a></p>
 
 

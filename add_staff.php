@@ -20,14 +20,11 @@
  <form action="" method="post">
  <div>
 
- <strong>Product: </strong> <input type="text" name="product" value="<?php $product; ?>" /><br/>
- <strong>Code: </strong> <input type="text" name="code" value="<?php $code; ?>" /><br/>
- <strong>Price: </strong> <input type="text" name="price" value="<?php $price; ?>" /><br/>
- <strong>Catagory: </strong>
- <select name="catagory" value="<?php $catagory;?>"> <option value="Food">Food</option>
-          <option value="Sport">Sport</option>
-          <option value="Drink">Drink</option>
-        </select>
+ <
+ <strong>User Name:<strong> <input type="text" name="userName" value="<?php $userName; ?>" /><br/>
+ <strong>User Email:</strong> <input type="text" name="userEmail" value="<?php $userEmail; ?>" /><br/>
+ <strong>Password: </strong><input type="text" name="userPass" value="<?php $userPass; ?>" /><br/>
+
 
 
 
@@ -45,28 +42,28 @@
   	// connect to the database
   	mysql_connect('localhost', 'root', 'db2u0ycq');
 
- 	mysql_select_db('test_db');
+ 	mysql_select_db('dbtest');
 
  	 // check if the form has been submitted
   	if (isset($_POST['submit']))
   	{
   		// get form data
-  		$product = $_POST['product'];
-  		$code = $_POST['code'];
- 		$price = $_POST['price'];
-    $catagory = $_POST['catagory'];
+  		$userName = $_POST['userName'];
+  		$userEmail = $_POST['userEmail'];
+ 		  $userPass = $_POST['userPass'];
+
 
   	  // check to make sure both fields are entered
-  	  if ($product == '' || $code == '' || $price == '' || $catagory =="" )
+  	  if ($userName == '' || $userEmail == '' || $userPass == ''  )
   	  {
 
  		 // if either field is blank, display the form again
-  		renderForm($product, $code, $price, $catagory, $error);
+  		renderForm($userName, $userEmail, $userPass, $error);
   	  }
   	  else
   	  {
   		// save the data to the database
-  		mysql_query("INSERT INTO onlineShop2 SET product='$product', code='$code', price='$price', catagory='$catagory'");
+  		mysql_query("INSERT INTO admin SET userName='$userName', userEmail='$userEmail', userPass='$userPass'");
 
   		// redirect back to table1
   		header("Location: admin.php");

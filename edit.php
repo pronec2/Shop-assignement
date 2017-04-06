@@ -16,8 +16,8 @@ function renderForm($id, $product, $code, $price, $error)
 
  <p><strong>ID:</strong> <?php echo $id; ?></p>
  <strong>Product: </strong> <input type="text" name="product" value="<?php echo $product; ?>" /><br/>
- <strong>Price:</strong> <input type="text" name="code" value="<?php echo $code; ?>" /><br/>
- <strong>Code: </strong> <input type="text" name="price" value="<?php echo $price; ?>" /><br/>
+ <strong>Code:</strong> <input type="text" name="code" value="<?php echo $code; ?>" /><br/>
+ <strong>Price </strong> <input type="text" name="price" value="<?php echo $price; ?>" /><br/>
 
  <input type="submit" name="submit" value="Submit">
  </div>
@@ -62,7 +62,7 @@ function renderForm($id, $product, $code, $price, $error)
 		    mysql_query("UPDATE onlineShop2 SET product='$product', price='$price',code='$code'  WHERE id='$id'");
 
  		    // go back to Table1.php
- 		    header("Location: index.php");
+ 		    header("Location: admin.php");
 	    } //close3
 
 	  }

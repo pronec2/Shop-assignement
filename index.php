@@ -9,7 +9,7 @@ $records=mysql_query($sql);
  ?>
  <html>
 		<head>
-			<title>tits</title>
+			<title>Patricia's Online Shop</title>
       <link href="bootstrap.min.css" rel="stylesheet">
       <link href="business-casual.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@ $records=mysql_query($sql);
 		</head>
 			<body>
         <div class="tagline-upper text-center text-heading text-shadow text-white mt-4 hidden-md-down">Online Shop </div>
-        <br> 
+        <br>
   <!-- <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-4 hidden-md-down">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div> No need for sub header, push product range up higher -->
 
 <!-- Main Menu signin, home page php basket !-->

@@ -19,7 +19,6 @@ $records=mysql_query($sql);
 		</head>
 			<body>
         <div class="tagline-upper text-center text-heading text-shadow text-white mt-4 hidden-md-down">Online Shop </div>
-   <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-4 hidden-md-down">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
 
 <!-- Main Menu signin, home page php basket !-->
 <!-- Navigation -->
@@ -61,6 +60,7 @@ $records=mysql_query($sql);
               						<th>Product</th>
               						<th>Price</th>
               						<th>Code</th>
+                          <th>Catagories</th>
               							<tr>
               								<?php
               										while($onlineShop2=mysql_fetch_assoc($records))
@@ -70,6 +70,7 @@ $records=mysql_query($sql);
               											echo "<td>".$onlineShop2['product']."</td>";
               											echo "<td>".$onlineShop2['code']."</td>";
               											echo "<td>".$onlineShop2['price']."</td>";
+                                    echo "<td>".$onlineShop2['catagory']."</td>";
 
               											echo "</tr>";
 

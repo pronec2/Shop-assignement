@@ -9,6 +9,7 @@
   exit;
  }
 
+
  $error = false;
 
  if( isset($_POST['btn-login']) ) {
@@ -21,6 +22,10 @@
   $pass = trim($_POST['pass']);
   $pass = strip_tags($pass);
   $pass = htmlspecialchars($pass);
+  //password 1 test
+  $pass1= trim($_POST['pass']);
+  $pass1 = strip_tags($pass);
+  $pass1 = htmlspecialchars($pass);
   // prevent sql injections / clear user invalid inputs
 
   if(empty($email)){
@@ -42,13 +47,26 @@
    $password = hash('sha256', $pass); // password hashing using SHA256
 
    $res=mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+
    $row=mysql_fetch_array($res);
    $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+
+//Code for admin landing page
+$password1 =$pass1;
+$res1=mysql_query("SELECT userId, userName, userPass FROM admin WHERE userEmail='$email'");
+$row1=mysql_fetch_array($res1);
+$count1 = mysql_num_rows($res1); // if uname/pass correct it returns must be 1 row
 
    if( $count == 1 && $row['userPass']==$password ) {
     $_SESSION['user'] = $row['userId'];
     header("Location: home.php");
-   } else {
+   }
+   else if( $count1 == 1 && $row1['userPass']==$password1 ) {
+          $_SESSION['admin'] = $row1['userId'];
+            header("Location: admin.php");
+            }
+
+   else {
     $errMSG = "Incorrect Credentials, Try again...";
    }
 
@@ -82,7 +100,7 @@
 
 
             </div>
-            
+
 
 <div class="bg-faded p-4 my-4">
          <div class="form-group">
