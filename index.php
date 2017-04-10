@@ -75,7 +75,7 @@ $records=mysql_query($sql);
                 <div class="row">
                     <div class="col-md-4 mb-4 mb-md-0">
                         <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="/images/Barista.jpg" alt="Person making coffee the traditionl way. Click here for our selection of drink beverages">
+                            <img class="card-img-top img-fluid" src="Barista.jpg" alt="Person making coffee the traditionl way. Click here for our selection of drink beverages">
                             <div class="card-block text-center">
                                 <h4 class="card-title m-0">Drinks <small class="text-muted">All things liquid</small></h4>
                             </div>
@@ -83,7 +83,7 @@ $records=mysql_query($sql);
                     </div>
                     <div class="col-md-4 mb-4 mb-md-0">
                         <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="/images/Food.jpg" alt="">
+                            <img class="card-img-top img-fluid" src="Food.jpg" alt="">
                             <div class="card-block text-center">
                                 <h4 class="card-title m-0">Food <small class="text-muted">All things solid</small></h4>
                             </div>
@@ -91,7 +91,7 @@ $records=mysql_query($sql);
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="/images/Sports.jpg" alt="">
+                            <img class="card-img-top img-fluid" src="Sports.jpg" alt="">
                             <div class="card-block text-center">
                                 <h4 class="card-title m-0">Sport <small class="text-muted">All things active</small></h4>
                             </div>
