@@ -1,7 +1,7 @@
 <?php
-mysql_connect('localhost', 'root', 'db2u0ycq');
+mysqli_connect('104.155.14.146', 'root', 'db2u0ycq');
 
-mysql_select_db('test_db');
+mysqli_select_db('test_db');
 
 $sql="SELECT * FROM onlineshop2";
 $records=mysql_query($sql);
